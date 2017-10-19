@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AnalyzerActivity"></activity>
+        <activity android:name=".AnalyzerActivity">
+
+
+        </activity>
+
     </application>
 
 </manifest>

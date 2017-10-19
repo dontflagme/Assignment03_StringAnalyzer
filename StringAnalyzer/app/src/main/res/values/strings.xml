@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StringAnalyzer</string>
+    <string name="title_activity_testing_class">testingClass</string>
 </resources>
