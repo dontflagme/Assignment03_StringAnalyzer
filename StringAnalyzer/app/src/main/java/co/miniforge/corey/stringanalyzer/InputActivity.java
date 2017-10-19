@@ -21,18 +21,7 @@ public class InputActivity extends AppCompatActivity {
 
         locateViews();
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"This is a toast", Toast.LENGTH_LONG).show();
-                String inputString = input.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), AnalyzerActivity.class);
-
-                intent.putExtra(intentTag, inputString);
-
-                startActivity(intent);
-            }
-        });
+        bindFunctionality();
     }
 
     void locateViews(){
@@ -44,12 +33,20 @@ public class InputActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"This is a toast", Toast.LENGTH_LONG).show();
+
+
                 String inputString = input.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), AnalyzerActivity.class);
-                //intent.putExtra(intentTag, inputString);
-                //intent.putExtra("test", "test");
-                startActivity(intent);
+
+                if(inputString.length() == 0){
+                    Toast.makeText(getApplicationContext(),"You need to input something in the text box", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Intent intent = new Intent(getApplicationContext(), AnalyzerActivity.class);
+                    //intent.putExtra(intentTag, inputString);
+                    //intent.putExtra("test", "test");
+                    startActivity(intent);
+                }
+
             }
         });
     }
